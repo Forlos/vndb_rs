@@ -1,0 +1,554 @@
+{
+  "more": false,
+  "num": 3,
+  "items": [
+    {
+      "gender": "f",
+      "birthday": [
+        null,
+        null
+      ],
+      "bust": null,
+      "hip": null,
+      "description": "A small, fairy-like creature no taller than 14 cm and possessing tiny, translucent, fluttering wings. But, even though she is so small, she can sing and speak at a normal person's volume. Despite having wings, she cannot rise above a certain height.\n\nPhorni is the self-declared, 'fairy of music' who shares the room with Chris ever since he moved in. Apart from Chris, no one is able to hear her, see her, or touch her.\n\nShe enjoys singing (which she is very good at), and would pester Chris into playing the Fortelle so that she can sing along. She has a habit of saying \"miyah\" when she is surprised.\n\n[From [url=http://en.wikipedia.org/wiki/Symphonic_Rain]Wikipedia[/url]]",
+      "voiced": [
+        {
+          "id": 566,
+          "note": null,
+          "aid": 1037,
+          "vid": 38
+        }
+      ],
+      "weight": null,
+      "waist": null,
+      "image": "https://s2.vndb.org/ch/89/74289.jpg",
+      "original": "フォーニ",
+      "vns": [
+        [
+          38,
+          0,
+          0,
+          "primary"
+        ]
+      ],
+      "id": 1,
+      "height": 14,
+      "name": "Phorni",
+      "instances": [
+        {
+          "name": "Arietta Fine",
+          "spoiler": 2,
+          "original": "アリエッタ・フィーネ",
+          "id": 16
+        }
+      ],
+      "traits": [
+        [
+          6,
+          0
+        ],
+        [
+          14,
+          0
+        ],
+        [
+          19,
+          0
+        ],
+        [
+          55,
+          0
+        ],
+        [
+          59,
+          0
+        ],
+        [
+          76,
+          0
+        ],
+        [
+          118,
+          0
+        ],
+        [
+          135,
+          0
+        ],
+        [
+          137,
+          0
+        ],
+        [
+          151,
+          0
+        ],
+        [
+          160,
+          0
+        ],
+        [
+          172,
+          0
+        ],
+        [
+          179,
+          0
+        ],
+        [
+          239,
+          2
+        ],
+        [
+          251,
+          0
+        ],
+        [
+          346,
+          0
+        ],
+        [
+          373,
+          2
+        ],
+        [
+          405,
+          0
+        ],
+        [
+          425,
+          0
+        ],
+        [
+          460,
+          0
+        ],
+        [
+          515,
+          0
+        ],
+        [
+          516,
+          0
+        ],
+        [
+          517,
+          0
+        ],
+        [
+          518,
+          0
+        ],
+        [
+          604,
+          0
+        ],
+        [
+          724,
+          0
+        ],
+        [
+          1017,
+          0
+        ],
+        [
+          1159,
+          0
+        ],
+        [
+          1198,
+          0
+        ],
+        [
+          1249,
+          0
+        ],
+        [
+          1482,
+          2
+        ]
+      ],
+      "bloodt": null,
+      "aliases": "Fairy of Music\nSprite of Music"
+    },
+    {
+      "height": 156,
+      "id": 2,
+      "vns": [
+        [
+          362,
+          0,
+          0,
+          "side"
+        ],
+        [
+          363,
+          0,
+          0,
+          "primary"
+        ],
+        [
+          7410,
+          0,
+          0,
+          "primary"
+        ]
+      ],
+      "traits": [
+        [
+          9,
+          0
+        ],
+        [
+          23,
+          0
+        ],
+        [
+          48,
+          0
+        ],
+        [
+          49,
+          0
+        ],
+        [
+          51,
+          0
+        ],
+        [
+          55,
+          0
+        ],
+        [
+          57,
+          0
+        ],
+        [
+          59,
+          0
+        ],
+        [
+          62,
+          0
+        ],
+        [
+          79,
+          0
+        ],
+        [
+          87,
+          0
+        ],
+        [
+          114,
+          0
+        ],
+        [
+          118,
+          0
+        ],
+        [
+          174,
+          0
+        ],
+        [
+          184,
+          0
+        ],
+        [
+          224,
+          0
+        ],
+        [
+          251,
+          0
+        ],
+        [
+          313,
+          0
+        ],
+        [
+          404,
+          0
+        ],
+        [
+          502,
+          0
+        ],
+        [
+          748,
+          0
+        ],
+        [
+          777,
+          0
+        ],
+        [
+          917,
+          0
+        ],
+        [
+          998,
+          0
+        ],
+        [
+          1020,
+          0
+        ],
+        [
+          1021,
+          0
+        ],
+        [
+          1408,
+          0
+        ],
+        [
+          1721,
+          0
+        ],
+        [
+          2562,
+          0
+        ]
+      ],
+      "bloodt": "ab",
+      "instances": [],
+      "name": "Watarase Jun",
+      "aliases": null,
+      "birthday": [
+        20,
+        9
+      ],
+      "gender": "m",
+      "hip": null,
+      "bust": null,
+      "weight": null,
+      "voiced": [
+        {
+          "id": 794,
+          "note": null,
+          "aid": 1405,
+          "vid": 363
+        },
+        {
+          "note": null,
+          "id": 794,
+          "aid": 1405,
+          "vid": 362
+        }
+      ],
+      "description": "Jun is another of [url=/c10382]Yuuma[/url]'s close friends. Jun is most notably known for being a self defined girl. She takes being a girl very seriously, and desires acceptance among other girls. However, she needs not to worry, as the girl's at her school treat her as they would any other girl, even allowing her to change clothes with them. She has the desire to date Yūma himself, but Yūma, being unable to view her as a female like the girls, strongly refuses. Jun adores hanging around other girls, and doesn't take her girl friends acceptance of her lightly. Jun's signature attack, the Patriot Missile Kick, is a flying side kick, normally used as a means to keep [url=/c10398]Hachi[/url] under control.\n\n[Edited from [url=http://en.wikipedia.org/wiki/Happiness!#Characters]Wikipedia[/url]]",
+      "original": "渡良瀬 準",
+      "image": "https://s2.vndb.org/ch/08/11508.jpg",
+      "waist": null
+    },
+    {
+      "image": "https://s2.vndb.org/ch/44/15944.jpg",
+      "waist": 54,
+      "original": "神凪 莉都",
+      "weight": 52,
+      "voiced": [
+        {
+          "vid": 7659,
+          "aid": 79,
+          "note": null,
+          "id": 28
+        },
+        {
+          "note": null,
+          "id": 28,
+          "aid": 79,
+          "vid": 1052
+        }
+      ],
+      "description": "Kannagi Rito, the chairman of Amatsuhara Private Academy. She inherited the title from [url=/c1410]Seika[/url]’s grandfather which acts as her guardian after she broke her relationship with the Kannagi family. Ever since a little girl, she is very wise and calculative in her every action. But meeting [url=/c1376]Shin'ya[/url] has changed something within her heart.\n\n[Edited from [url=http://hodohodonine.wordpress.com/2008/11/05/concerto-note-wrap-up/]Kresnik's review[/url].]",
+      "bust": 83,
+      "hip": 77,
+      "birthday": [
+        11,
+        1
+      ],
+      "gender": "f",
+      "aliases": null,
+      "instances": [
+        {
+          "id": 65253,
+          "name": "Kannagi Rito",
+          "spoiler": 0,
+          "original": "神凪 莉都"
+        },
+        {
+          "id": 12883,
+          "name": "Kannagi Rito",
+          "spoiler": 2,
+          "original": "神凪 莉都"
+        }
+      ],
+      "name": "Kannagi Rito",
+      "bloodt": null,
+      "traits": [
+        [
+          6,
+          0
+        ],
+        [
+          13,
+          0
+        ],
+        [
+          23,
+          0
+        ],
+        [
+          54,
+          0
+        ],
+        [
+          55,
+          0
+        ],
+        [
+          57,
+          0
+        ],
+        [
+          59,
+          0
+        ],
+        [
+          62,
+          0
+        ],
+        [
+          68,
+          0
+        ],
+        [
+          104,
+          0
+        ],
+        [
+          110,
+          0
+        ],
+        [
+          137,
+          0
+        ],
+        [
+          161,
+          0
+        ],
+        [
+          174,
+          0
+        ],
+        [
+          186,
+          0
+        ],
+        [
+          309,
+          0
+        ],
+        [
+          314,
+          2
+        ],
+        [
+          316,
+          1
+        ],
+        [
+          324,
+          0
+        ],
+        [
+          442,
+          0
+        ],
+        [
+          444,
+          0
+        ],
+        [
+          445,
+          0
+        ],
+        [
+          466,
+          0
+        ],
+        [
+          471,
+          0
+        ],
+        [
+          490,
+          0
+        ],
+        [
+          502,
+          0
+        ],
+        [
+          515,
+          0
+        ],
+        [
+          564,
+          0
+        ],
+        [
+          661,
+          0
+        ],
+        [
+          667,
+          1
+        ],
+        [
+          688,
+          2
+        ],
+        [
+          692,
+          0
+        ],
+        [
+          918,
+          0
+        ],
+        [
+          998,
+          0
+        ],
+        [
+          1021,
+          0
+        ],
+        [
+          1104,
+          0
+        ]
+      ],
+      "id": 1377,
+      "vns": [
+        [
+          1052,
+          0,
+          0,
+          "primary"
+        ],
+        [
+          7659,
+          0,
+          0,
+          "primary"
+        ]
+      ],
+      "height": 165
+    }
+  ]
+}

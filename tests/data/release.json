@@ -1,0 +1,506 @@
+{
+  "num": 10,
+  "items": [
+    {
+      "resolution": "800x600",
+      "languages": [
+        "ja"
+      ],
+      "released": "2008-05-03",
+      "type": "complete",
+      "media": [
+        {
+          "qty": 1,
+          "medium": "dvd"
+        }
+      ],
+      "freeware": false,
+      "voiced": null,
+      "catalog": null,
+      "title": "Clear ~Crystal Stories~",
+      "producers": [
+        {
+          "id": 251,
+          "publisher": true,
+          "developer": true,
+          "original": null,
+          "type": "co",
+          "name": "Moonstone"
+        }
+      ],
+      "platforms": [
+        "win"
+      ],
+      "animation": [
+        null,
+        null
+      ],
+      "original": "Clear~クリスタルストーリーズ~",
+      "id": 1001,
+      "notes": null,
+      "gtin": "4580147070143",
+      "vn": [
+        {
+          "original": "Clear～クリスタルストーリーズ～",
+          "id": 469,
+          "title": "Clear ~Crystal Stories~"
+        }
+      ],
+      "minage": 18,
+      "doujin": false,
+      "website": "http://www.moon-stone.jp/ms07crystal/index07.html",
+      "patch": false
+    },
+    {
+      "original": "Repeat ～繰り返される刻そして…～",
+      "id": 1002,
+      "notes": null,
+      "gtin": "4933032001416",
+      "vn": [
+        {
+          "original": "Repeat ～繰り返される刻そして…～",
+          "title": "Repeat ~Kurikaesareru Toki Soshite...~",
+          "id": 416
+        }
+      ],
+      "website": "http://sirius.product.co.jp/repeat/repeat.htm",
+      "minage": 18,
+      "doujin": false,
+      "patch": false,
+      "resolution": "640x480",
+      "languages": [
+        "ja"
+      ],
+      "type": "complete",
+      "released": "2000-04-14",
+      "media": [
+        {
+          "medium": "cd",
+          "qty": 1
+        }
+      ],
+      "voiced": null,
+      "freeware": false,
+      "catalog": null,
+      "title": "Repeat ~Kurikaesareru Toki Soshite...~",
+      "animation": [
+        null,
+        null
+      ],
+      "platforms": [
+        "win"
+      ],
+      "producers": [
+        {
+          "type": "co",
+          "original": "シリウス",
+          "name": "Sirius",
+          "developer": true,
+          "publisher": true,
+          "id": 252
+        }
+      ]
+    },
+    {
+      "original": "媚肉の香り～ネトリネトラレヤリヤラレ～",
+      "website": "https://web.archive.org/web/20150116050947/http://www.elf-game.co.jp/net_shop/soft/special/biniku/index.html",
+      "minage": 18,
+      "doujin": false,
+      "patch": false,
+      "notes": null,
+      "id": 1003,
+      "gtin": "4988720892036",
+      "vn": [
+        {
+          "title": "Biniku no Kaori ~Netori Netorare Yari Yarare~",
+          "id": 470,
+          "original": "媚肉の香り～ネトリネトラレヤリヤラレ～"
+        }
+      ],
+      "voiced": 4,
+      "freeware": false,
+      "media": [
+        {
+          "medium": "dvd",
+          "qty": 1
+        }
+      ],
+      "languages": [
+        "ja"
+      ],
+      "resolution": "800x600",
+      "type": "complete",
+      "released": "2008-03-28",
+      "animation": [
+        2,
+        3
+      ],
+      "platforms": [
+        "win"
+      ],
+      "producers": [
+        {
+          "id": 131,
+          "developer": true,
+          "publisher": true,
+          "name": "Elf",
+          "original": null,
+          "type": "co"
+        }
+      ],
+      "title": "Biniku no Kaori ~Netori Netorare Yari Yarare~",
+      "catalog": null
+    },
+    {
+      "title": "Reconquista - First Press Edition",
+      "catalog": null,
+      "animation": [
+        1,
+        1
+      ],
+      "platforms": [
+        "win"
+      ],
+      "producers": [
+        {
+          "type": "co",
+          "original": "コットンソフト",
+          "name": "Cotton Soft",
+          "publisher": true,
+          "developer": true,
+          "id": 234
+        }
+      ],
+      "type": "complete",
+      "released": "2007-06-22",
+      "languages": [
+        "ja"
+      ],
+      "resolution": "800x600",
+      "voiced": 3,
+      "freeware": false,
+      "media": [
+        {
+          "medium": "dvd",
+          "qty": 1
+        }
+      ],
+      "vn": [
+        {
+          "original": "レコンキスタ",
+          "title": "Reconquista",
+          "id": 471
+        }
+      ],
+      "gtin": "4935066301661",
+      "notes": null,
+      "id": 1004,
+      "patch": false,
+      "website": "http://cotton-soft.com/gameproducts/02_recon/index.htm",
+      "doujin": false,
+      "minage": 18,
+      "original": "レコンキスタ 初回版"
+    },
+    {
+      "producers": [
+        {
+          "name": "Chien",
+          "type": "co",
+          "original": null,
+          "publisher": true,
+          "developer": true,
+          "id": 218
+        }
+      ],
+      "animation": [
+        1,
+        1
+      ],
+      "platforms": [
+        "win"
+      ],
+      "catalog": null,
+      "title": "Reitetsu Reisei Shikashite XXX!!",
+      "media": [
+        {
+          "qty": 1,
+          "medium": "dvd"
+        }
+      ],
+      "freeware": false,
+      "voiced": 4,
+      "resolution": "800x600",
+      "languages": [
+        "ja"
+      ],
+      "released": "2008-03-14",
+      "type": "complete",
+      "doujin": false,
+      "minage": 18,
+      "website": "http://www.chien.jp/reirei/index.html",
+      "patch": false,
+      "id": 1005,
+      "notes": null,
+      "vn": [
+        {
+          "id": 472,
+          "title": "Reitetsu Reisei Shikashite XXX!!",
+          "original": "冷徹冷静しかして×××！！"
+        }
+      ],
+      "gtin": "4560100333218",
+      "original": "冷徹冷静しかして×××！！"
+    },
+    {
+      "released": "2006-06-23",
+      "type": "complete",
+      "languages": [
+        "ja"
+      ],
+      "resolution": "800x600",
+      "freeware": false,
+      "voiced": 3,
+      "media": [
+        {
+          "qty": 1,
+          "medium": "dvd"
+        }
+      ],
+      "title": "H2O -Footprints in the Sand-",
+      "catalog": null,
+      "producers": [
+        {
+          "publisher": true,
+          "developer": true,
+          "id": 259,
+          "type": "co",
+          "original": "枕",
+          "name": "Makura"
+        }
+      ],
+      "platforms": [
+        "win"
+      ],
+      "animation": [
+        1,
+        1
+      ],
+      "original": null,
+      "gtin": "4525189005012",
+      "vn": [
+        {
+          "original": null,
+          "title": "H2O -Footprints in the Sand-",
+          "id": 473
+        }
+      ],
+      "notes": null,
+      "id": 1006,
+      "patch": false,
+      "minage": 18,
+      "doujin": false,
+      "website": "http://www.makura-soft.com/h2o/index.htm"
+    },
+    {
+      "minage": 18,
+      "doujin": false,
+      "website": "http://www.sp-janis.com/aniseed/relict/",
+      "patch": false,
+      "id": 1007,
+      "notes": null,
+      "gtin": "4521868400086",
+      "vn": [
+        {
+          "original": "Relict～トキの忘れもの～",
+          "id": 474,
+          "title": "Relict ~Toki no Wasuremono~"
+        }
+      ],
+      "original": "Relict～トキの忘れもの～ 初回版",
+      "producers": [
+        {
+          "type": "co",
+          "original": null,
+          "name": "AniSeed",
+          "publisher": true,
+          "developer": true,
+          "id": 260
+        }
+      ],
+      "platforms": [
+        "win"
+      ],
+      "animation": [
+        null,
+        null
+      ],
+      "catalog": null,
+      "title": "Relict ~Toki no Wasuremono~ First Press Edition",
+      "media": [
+        {
+          "qty": 1,
+          "medium": "cd"
+        }
+      ],
+      "freeware": false,
+      "voiced": null,
+      "resolution": null,
+      "languages": [
+        "ja"
+      ],
+      "released": "2004-10-29",
+      "type": "complete"
+    },
+    {
+      "freeware": false,
+      "voiced": null,
+      "media": [
+        {
+          "qty": 1,
+          "medium": "dvd"
+        }
+      ],
+      "languages": [
+        "ja"
+      ],
+      "resolution": "800x600",
+      "released": "2006-03-24",
+      "type": "complete",
+      "producers": [
+        {
+          "name": "AniSeed",
+          "type": "co",
+          "original": null,
+          "developer": true,
+          "publisher": true,
+          "id": 260
+        }
+      ],
+      "animation": [
+        null,
+        null
+      ],
+      "platforms": [
+        "win"
+      ],
+      "title": "Relict ~Toki no Wasuremono~ DVD-ROM Edition",
+      "catalog": "SAS-010",
+      "original": "Relict～トキの忘れもの～ DVD-ROM版",
+      "doujin": false,
+      "minage": 18,
+      "website": "http://www.sp-janis.com/aniseed/relict/",
+      "patch": false,
+      "notes": null,
+      "id": 1008,
+      "gtin": "4521868400109",
+      "vn": [
+        {
+          "id": 474,
+          "title": "Relict ~Toki no Wasuremono~",
+          "original": "Relict～トキの忘れもの～"
+        }
+      ]
+    },
+    {
+      "patch": false,
+      "doujin": false,
+      "minage": 18,
+      "website": "http://www.sp-janis.com/aniseed/relict2/",
+      "vn": [
+        {
+          "original": "Relict2～エピソード・ムーン～",
+          "id": 475,
+          "title": "Relict 2 -Episode Moon-"
+        }
+      ],
+      "gtin": "4521868400116",
+      "id": 1009,
+      "notes": null,
+      "original": "Relict2～エピソード・ムーン～",
+      "producers": [
+        {
+          "developer": true,
+          "publisher": true,
+          "id": 260,
+          "name": "AniSeed",
+          "type": "co",
+          "original": null
+        }
+      ],
+      "platforms": [
+        "win"
+      ],
+      "animation": [
+        null,
+        null
+      ],
+      "catalog": null,
+      "title": "Relict 2 -Episode Moon-",
+      "media": [
+        {
+          "qty": 1,
+          "medium": "dvd"
+        }
+      ],
+      "freeware": false,
+      "voiced": null,
+      "released": "2006-04-28",
+      "type": "complete",
+      "resolution": null,
+      "languages": [
+        "ja"
+      ]
+    },
+    {
+      "animation": [
+        1,
+        1
+      ],
+      "platforms": [
+        "win"
+      ],
+      "producers": [
+        {
+          "publisher": true,
+          "developer": true,
+          "id": 3262,
+          "type": "co",
+          "original": null,
+          "name": "Crossnet-Pie"
+        }
+      ],
+      "title": "Resort Boin",
+      "catalog": null,
+      "voiced": 4,
+      "freeware": false,
+      "media": [
+        {
+          "qty": 1,
+          "medium": "dvd"
+        }
+      ],
+      "type": "complete",
+      "released": "2007-03-16",
+      "languages": [
+        "ja"
+      ],
+      "resolution": "800x600",
+      "patch": false,
+      "website": "http://web.archive.org/web/20070202023810/http://221.246.241.114/index.htm",
+      "doujin": false,
+      "minage": 18,
+      "gtin": "4526457060061",
+      "vn": [
+        {
+          "original": "リゾートBOIN",
+          "id": 476,
+          "title": "Resort Boin"
+        }
+      ],
+      "notes": null,
+      "id": 1010,
+      "original": "リゾートBOIN"
+    }
+  ],
+  "more": true
+}

@@ -6,17 +6,17 @@ use serde::Deserialize;
 pub const USER_FLAGS: [GetFlag; 1] = [Basic];
 
 /// Results returned from get user method
-#[derive(Deserialize, Debug)]
+#[derive(Deserialize, Debug, PartialEq)]
 pub struct GetUserResults {
     #[serde(flatten)]
-    results: Results,
-    items: Vec<GetUserResponse>,
+    pub results: Results,
+    pub items: Vec<GetUserResponse>,
 }
 
 /// All fields returned by get user method
 /// fields are either Some or None depending on GetFlag param passed to get function
-#[derive(Deserialize, Debug)]
+#[derive(Deserialize, Debug, PartialEq)]
 pub struct GetUserResponse {
-    id: usize,
-    username: Option<String>,
+    pub id: usize,
+    pub username: Option<String>,
 }

@@ -6,45 +6,45 @@ use serde::Deserialize;
 pub const PRODUCER_FLAGS: [GetFlag; 3] = [Basic, Details, Relations];
 
 /// Results returned from get producer method
-#[derive(Deserialize, Debug)]
+#[derive(Deserialize, Debug, PartialEq)]
 pub struct GetProducerResults {
     #[serde(flatten)]
-    results: Results,
-    items: Vec<GetProducerResponse>,
+    pub results: Results,
+    pub items: Vec<GetProducerResponse>,
 }
 
 /// All fields returned by get producer method
 /// fields are either Some or None depending on GetFlag param passed to get function
-#[derive(Deserialize, Debug)]
+#[derive(Deserialize, Debug, PartialEq)]
 pub struct GetProducerResponse {
-    id: usize,
-    name: Option<String>,
+    pub id: usize,
+    pub name: Option<String>,
     #[serde(rename = "original")]
-    original_name: Option<String>,
+    pub original_name: Option<String>,
     #[serde(rename = "type")]
-    producer_type: Option<String>,
-    language: Option<String>,
-    links: Option<Links>,
+    pub producer_type: Option<String>,
+    pub language: Option<String>,
+    pub links: Option<Links>,
     // TODO List of alternative names, separated by a newline
-    aliases: Option<String>,
-    description: Option<String>,
-    relations: Option<Vec<Relations>>,
+    pub aliases: Option<String>,
+    pub description: Option<String>,
+    pub relations: Option<Vec<Relations>>,
 }
 
 /// External links
-#[derive(Deserialize, Debug)]
+#[derive(Deserialize, Debug, PartialEq)]
 pub struct Links {
-    homepage: Option<String>,
-    wikipedia: Option<String>,
-    wikidata: Option<String>,
+    pub homepage: Option<String>,
+    pub wikipedia: Option<String>,
+    pub wikidata: Option<String>,
 }
 
 /// List of related producers
-#[derive(Deserialize, Debug)]
+#[derive(Deserialize, Debug, PartialEq)]
 pub struct Relations {
-    id: usize,
-    relation: String,
-    name: String,
+    pub id: usize,
+    pub relation: String,
+    pub name: String,
     #[serde(rename = "original")]
-    original_name: Option<String>,
+    pub original_name: Option<String>,
 }

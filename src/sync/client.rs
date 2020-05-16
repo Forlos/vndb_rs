@@ -1,22 +1,20 @@
 use serde::de::DeserializeOwned;
-use std::{
-    io::{BufRead, BufReader, Read, Write},
-    net::TcpStream,
-};
+use std::io::{BufRead, BufReader, Read, Write};
 
-use crate::common::models::LoginRequestBuilder;
-use crate::common::response::{DbStatsResponse, Response};
+use crate::common::response::Response;
 use crate::common::{
+    dbstats::DbStatsResponse,
     error::{VndbError, VndbResult},
     get::{
         character::GetCharacterResults, producer::GetProducerResults, release::GetReleaseResults,
         staff::GetStaffResults, ulist::GetUListResults, ulistlabels::GetUListLabelsResults,
-        user::GetUserResults, vn::GetVnResults, GetFlag, GetRequest, GetResponse, GetType, Options,
+        user::GetUserResults, vn::GetVnResults, GetFlag, GetRequest, GetType, Options,
     },
+    login::LoginRequest,
     request::RequestType,
-    set::{Fields, SetRequest, SetType, UListFieldsBuilder},
+    set::{ulist::UListFields, Fields, SetRequest, SetType},
 };
-use crate::{API_URL, END_OF_TRANSMISSION, SPACE_CHAR};
+use crate::{END_OF_TRANSMISSION, SPACE_CHAR};
 
 #[derive(Debug)]
 pub struct Client<IO>
@@ -36,7 +34,7 @@ where
         self.stream
             .read_until(END_OF_TRANSMISSION, &mut buf)
             .unwrap();
-        println!("Response: {:?}", String::from_utf8(buf.clone()));
+        println!("Response: {}", String::from_utf8(buf.clone()).unwrap());
         buf
     }
     #[inline]
@@ -45,6 +43,7 @@ where
         writer.write(&input).unwrap();
         writer.flush().unwrap();
     }
+    #[inline]
     #[must_use]
     fn make_request(&mut self, request_type: RequestType, buf: &[u8]) -> VndbResult<Response> {
         let mut input = Vec::with_capacity(0x100);
@@ -69,14 +68,9 @@ where
     {
         let response = self.make_request(
             RequestType::Get,
-            GetRequest {
-                get_type,
-                flags,
-                filters,
-                options,
-            }
-            .to_request()
-            .as_bytes(),
+            GetRequest::new(get_type, flags, filters, options)
+                .to_request()
+                .as_bytes(),
         )?;
         match response {
             Response::Results(vec) => Ok(serde_json::from_slice(&vec).unwrap()),
@@ -87,16 +81,12 @@ where
         }
     }
     #[inline]
-    fn set(&mut self, set_type: SetType, id: String, fields: Option<Fields>) -> VndbResult<()> {
+    fn set(&mut self, set_type: SetType, id: usize, fields: Option<Fields>) -> VndbResult<()> {
         let response = self.make_request(
             RequestType::Set,
-            SetRequest {
-                set_type,
-                id,
-                fields,
-            }
-            .to_request()
-            .as_bytes(),
+            SetRequest::new(set_type, id, fields)
+                .to_request()
+                .as_bytes(),
         )?;
         match response {
             Response::Ok => Ok(()),
@@ -114,7 +104,7 @@ where
     }
     /// Login without credentials, using set commands will result in error
     pub fn login(&mut self) -> VndbResult<()> {
-        let request = LoginRequestBuilder::default().build().unwrap();
+        let request = LoginRequest::default();
         let response =
             self.make_request(RequestType::Login, &serde_json::to_vec(&request).unwrap())?;
         match response {
@@ -127,11 +117,7 @@ where
     }
     /// Login using credentials, allowing using set commands
     pub fn login_with_credentials(&mut self, username: &str, password: &str) -> VndbResult<()> {
-        let request = LoginRequestBuilder::default()
-            .username(username)
-            .password(password)
-            .build()
-            .unwrap();
+        let request = LoginRequest::new(username, password);
         let response =
             self.make_request(RequestType::Login, &serde_json::to_vec(&request).unwrap())?;
         match response {
@@ -207,7 +193,7 @@ where
     ) -> VndbResult<GetUserResults> {
         self.get(GetType::User, flags, filters, options)
     }
-    /// Get User list labels
+    /// Get user list labels
     pub fn get_ulist_labels(
         &mut self,
         flags: &[GetFlag],
@@ -216,7 +202,7 @@ where
     ) -> VndbResult<GetUListLabelsResults> {
         self.get(GetType::UlistLabels, flags, filters, options)
     }
-    /// Get User lists
+    /// Get user lists
     pub fn get_ulist(
         &mut self,
         flags: &[GetFlag],
@@ -228,22 +214,14 @@ where
     /// This command facilitates adding, removing and modifying your VN list.
     ///
     /// The id argument is the visual novel ID
-    /// If field is not set it is removed,
-    /// so to persist previous changes call get beforehand and supply results from it to those fields
-    pub fn set_ulist(&mut self, id: String, vote: usize) -> VndbResult<()> {
-        self.set(
-            SetType::Ulist,
-            id,
-            Some(Fields::Ulist(
-                UListFieldsBuilder::default().vote(vote).build().unwrap(),
-            )),
-        )
+    pub fn set_ulist(&mut self, id: usize, ulist: UListFields) -> VndbResult<()> {
+        self.set(SetType::Ulist, id, Some(Fields::Ulist(ulist)))
     }
     /// Remove visual novel from user list
     ///
     /// When removing a ulist item,
     /// any releases associated with the VN will be removed from the users' list as well.
-    pub fn delete_ulist(&mut self, id: String) -> VndbResult<()> {
+    pub fn delete_ulist(&mut self, id: usize) -> VndbResult<()> {
         self.set(SetType::Ulist, id, None)
     }
 }

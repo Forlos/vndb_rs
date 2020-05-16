@@ -7,46 +7,46 @@ pub const CHARACTER_FLAGS: [GetFlag; 7] =
     [Basic, Details, Measures, Traits, Vns, Voiced, Instances];
 
 /// Results returned from get character method
-#[derive(Deserialize, Debug)]
+#[derive(Deserialize, Debug, PartialEq)]
 pub struct GetCharacterResults {
     #[serde(flatten)]
-    results: Results,
-    items: Vec<GetCharacterResponse>,
+    pub results: Results,
+    pub items: Vec<GetCharacterResponse>,
 }
 
 /// All fields returned by get character method
 /// fields are either Some or None depending on GetFlag param passed to get function
-#[derive(Deserialize, Debug)]
+#[derive(Deserialize, Debug, PartialEq)]
 pub struct GetCharacterResponse {
-    id: usize,
-    name: Option<String>,
+    pub id: usize,
+    pub name: Option<String>,
     #[serde(rename = "original")]
-    original_name: Option<String>,
-    gender: Option<Gender>,
+    pub original_name: Option<String>,
+    pub gender: Option<Gender>,
     #[serde(rename = "bloodt")]
-    blood_type: Option<BloodType>,
+    pub blood_type: Option<BloodType>,
     // TODO Deserialize to struct
-    birthday: Option<Vec<Option<u8>>>,
+    pub birthday: Option<Vec<Option<u8>>>,
     // TODO List of alternative names, separated by a newline
-    aliases: Option<String>,
-    description: Option<String>,
+    pub aliases: Option<String>,
+    pub description: Option<String>,
     #[serde(rename = "image")]
-    image_url: Option<String>,
-    bust: Option<usize>,
-    waist: Option<usize>,
-    hip: Option<usize>,
-    height: Option<usize>,
-    weight: Option<usize>,
+    pub image_url: Option<String>,
+    pub bust: Option<usize>,
+    pub waist: Option<usize>,
+    pub hip: Option<usize>,
+    pub height: Option<usize>,
+    pub weight: Option<usize>,
     // TODO Deserialize to struct
-    traits: Option<Vec<Vec<usize>>>,
+    pub traits: Option<Vec<Vec<usize>>>,
     // TODO Deserialize to struct
-    vns: Option<Vec<(usize, usize, SpoilerLevel, String)>>,
-    voiced: Option<Vec<VA>>,
-    instances: Option<Vec<Instances>>,
+    pub vns: Option<Vec<(usize, usize, SpoilerLevel, String)>>,
+    pub voiced: Option<Vec<VA>>,
+    pub instances: Option<Vec<Instances>>,
 }
 
 /// Blood type, "a", "b", "ab" or "o"
-#[derive(Deserialize, Debug)]
+#[derive(Deserialize, Debug, PartialEq)]
 #[serde(rename_all = "lowercase")]
 pub enum BloodType {
     A,
@@ -56,7 +56,7 @@ pub enum BloodType {
 }
 
 /// Character role in vn
-#[derive(Deserialize, Debug)]
+#[derive(Deserialize, Debug, PartialEq)]
 #[serde(rename_all = "lowercase")]
 pub enum Role {
     Main,
@@ -66,7 +66,7 @@ pub enum Role {
 }
 
 /// Voice actresses (staff) that voiced this character, per VN.
-#[derive(Deserialize, Debug)]
+#[derive(Deserialize, Debug, PartialEq)]
 pub struct VA {
     id: usize,
     #[serde(rename = "aid")]
@@ -77,7 +77,7 @@ pub struct VA {
 }
 
 /// Instances of this character (excluding the character entry itself).
-#[derive(Deserialize, Debug)]
+#[derive(Deserialize, Debug, PartialEq)]
 pub struct Instances {
     id: usize,
     spoiler: SpoilerLevel,

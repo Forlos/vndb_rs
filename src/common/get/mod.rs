@@ -33,10 +33,10 @@ pub enum GetResponse {
 }
 
 /// Describes number of items return
-#[derive(Deserialize, Debug)]
+#[derive(Deserialize, Debug, PartialEq)]
 pub struct Results {
-    num: usize,
-    more: bool,
+    pub num: usize,
+    pub more: bool,
 }
 
 #[derive(AsRefStr, Debug)]
@@ -78,13 +78,26 @@ pub enum GetFlag {
 
 #[derive(Debug)]
 pub(crate) struct GetRequest<'a> {
-    pub(crate) get_type: GetType,
-    pub(crate) flags: &'a [GetFlag],
-    pub(crate) filters: String,
-    pub(crate) options: Option<Options>,
+    get_type: GetType,
+    flags: &'a [GetFlag],
+    filters: String,
+    options: Option<Options>,
 }
 
 impl<'a> GetRequest<'a> {
+    pub fn new(
+        get_type: GetType,
+        flags: &'a [GetFlag],
+        filters: String,
+        options: Option<Options>,
+    ) -> Self {
+        Self {
+            get_type,
+            flags,
+            filters,
+            options,
+        }
+    }
     pub(crate) fn to_request(&self) -> String {
         let mut flags = String::new();
         for flag in self.flags {
@@ -125,14 +138,14 @@ impl Options {
 }
 
 #[repr(u8)]
-#[derive(Deserialize_repr, Debug)]
-enum SpoilerLevel {
+#[derive(Deserialize_repr, Debug, PartialEq)]
+pub enum SpoilerLevel {
     None = 0,
     Minor = 1,
     Major = 2,
 }
 
-#[derive(Deserialize, Debug)]
+#[derive(Deserialize, Debug, PartialEq)]
 #[serde(rename_all = "lowercase")]
 pub enum Gender {
     M,

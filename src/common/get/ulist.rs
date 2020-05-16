@@ -6,37 +6,37 @@ use serde::Deserialize;
 pub const ULIST_FLAGS: [GetFlag; 2] = [Basic, Labels];
 
 /// Results returned from get ulist method
-#[derive(Deserialize, Debug)]
+#[derive(Deserialize, Debug, PartialEq)]
 pub struct GetUListResults {
     #[serde(flatten)]
-    results: Results,
-    items: Vec<GetUListResponse>,
+    pub results: Results,
+    pub items: Vec<GetUListResponse>,
 }
 
 /// All fields returned by get ulist method
 /// fields are either Some or None depending on GetFlag param passed to get function
-#[derive(Deserialize, Debug)]
+#[derive(Deserialize, Debug, PartialEq)]
 pub struct GetUListResponse {
     #[serde(rename = "uid")]
-    user_id: usize,
+    pub user_id: usize,
     #[serde(rename = "vn")]
-    vn_id: usize,
+    pub vn_id: usize,
     /// Unix timestamp of when this item has been added.
-    added: usize,
+    pub added: usize,
     /// Unix timestamp of when this item has been added.
-    lastmod: usize,
+    pub lastmod: usize,
     /// Unix timestamp when the vote has been cast.
-    voted: Option<usize>,
+    pub voted: Option<usize>,
     /// Vote between 10 and 100.
-    vote: Option<usize>,
-    notes: Option<String>,
-    started: Option<String>,
-    finished: Option<String>,
-    labels: Option<Vec<Label>>,
+    pub vote: Option<usize>,
+    pub notes: Option<String>,
+    pub started: Option<String>,
+    pub finished: Option<String>,
+    pub labels: Option<Vec<Label>>,
 }
 
-#[derive(Deserialize, Debug)]
+#[derive(Deserialize, Debug, PartialEq)]
 pub struct Label {
-    id: usize,
-    label: String,
+    pub id: usize,
+    pub label: String,
 }

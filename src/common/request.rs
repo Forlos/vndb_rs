@@ -8,12 +8,3 @@ pub enum RequestType {
     Get,
     Set,
 }
-
-#[derive(AsRefStr, Debug)]
-#[strum(serialize_all = "lowercase")]
-enum SetType {
-    Votelist,
-    Vnlist,
-    Wishlist,
-    Ulist,
-}
