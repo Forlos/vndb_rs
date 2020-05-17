@@ -1,4 +1,5 @@
 mod dbstats;
+mod error;
 mod get;
 mod login;
 mod set;

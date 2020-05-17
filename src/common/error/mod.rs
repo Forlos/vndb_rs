@@ -1,8 +1,8 @@
-use serde::Deserialize;
+use serde::{Deserialize, Serialize};
 
 pub type VndbResult<T> = Result<T, VndbError>;
 
-#[derive(Deserialize, Debug)]
+#[derive(Serialize, Deserialize, Debug, PartialEq)]
 #[serde(tag = "id", rename_all = "lowercase")]
 pub enum VndbError {
     Parse {
@@ -22,8 +22,8 @@ pub enum VndbError {
     Throttled {
         msg: String,
         typ: String,
-        minwait: usize,
-        fullwait: usize,
+        minwait: f64,
+        fullwait: f64,
     },
     Auth {
         msg: String,
