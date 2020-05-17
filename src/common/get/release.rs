@@ -39,7 +39,7 @@ pub struct GetReleaseResponse {
     pub platforms: Option<Vec<String>>,
     pub media: Option<Vec<Media>>,
     // TODO deserialize to struct
-    pub resolution: Option<Option<String>>,
+    pub resolution: Option<String>,
     pub voiced: Option<Voiced>,
     // TODO deserialize to struct
     pub animation: Option<Vec<Option<Animation>>>,

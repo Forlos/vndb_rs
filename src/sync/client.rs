@@ -54,7 +54,6 @@ where
         }
     }
     #[inline]
-    #[must_use]
     fn make_request(&mut self, request_type: RequestType, buf: &[u8]) -> VndbResult<Response> {
         let mut input = Vec::with_capacity(0x100);
         input.extend(request_type.as_ref().as_bytes());

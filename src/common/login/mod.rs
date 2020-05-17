@@ -1,8 +1,8 @@
 use serde::Serialize;
 
 const PROTOCOL_VER: u8 = 1;
-const CLIENT: &'static str = "vndb_rs";
-const CLIENT_VER: &'static str = env!("CARGO_PKG_VERSION");
+const CLIENT: &str = "vndb_rs";
+const CLIENT_VER: &str = env!("CARGO_PKG_VERSION");
 
 #[derive(Serialize, Debug)]
 pub(crate) struct LoginRequest<'a> {

@@ -23,14 +23,14 @@ use vn::GetVnResponse;
 #[derive(Deserialize, Debug)]
 #[serde(untagged)]
 pub enum GetResponse {
-    Vn(GetVnResponse),
-    Release(GetReleaseResponse),
-    Producer(GetProducerResponse),
-    Character(GetCharacterResponse),
-    Staff(GetStaffResponse),
-    User(GetUserResponse),
-    UListLabels(GetUListLabelsResponse),
-    UList(GetUListResponse),
+    Vn(Box<GetVnResponse>),
+    Release(Box<GetReleaseResponse>),
+    Producer(Box<GetProducerResponse>),
+    Character(Box<GetCharacterResponse>),
+    Staff(Box<GetStaffResponse>),
+    User(Box<GetUserResponse>),
+    UListLabels(Box<GetUListLabelsResponse>),
+    UList(Box<GetUListResponse>),
 }
 
 /// Describes number of items return
