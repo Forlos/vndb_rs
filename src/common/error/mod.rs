@@ -47,6 +47,9 @@ pub enum VndbError {
     SetType {
         msg: String,
     },
+    IO {
+        msg: String,
+    },
     Other {
         msg: String,
     },

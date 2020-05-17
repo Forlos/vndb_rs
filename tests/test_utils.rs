@@ -12,7 +12,9 @@ pub fn test_listener_with_response(mut buf: Vec<u8>) -> SocketAddr {
         .local_addr()
         .expect("Could not get test listener addr");
     thread::spawn(move || {
-        let (mut stream, _addr) = listener.accept().unwrap();
+        let (mut stream, _addr) = listener
+            .accept()
+            .expect("Could not accept incoming test connection");
         stream
             .write(&buf)
             .expect("Could not write in test listener");

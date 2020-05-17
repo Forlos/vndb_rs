@@ -29,19 +29,29 @@ where
     IO: Read + Write,
 {
     #[inline]
-    fn read(&mut self) -> Vec<u8> {
+    fn read(&mut self) -> VndbResult<Vec<u8>> {
         let mut buf = Vec::with_capacity(0x100);
-        self.stream
-            .read_until(END_OF_TRANSMISSION, &mut buf)
-            .unwrap();
-        println!("Response: {}", String::from_utf8(buf.clone()).unwrap());
-        buf
+        match self.stream.read_until(END_OF_TRANSMISSION, &mut buf) {
+            Ok(_) => Ok(buf),
+            Err(err) => Err(VndbError::IO {
+                msg: err.to_string(),
+            }),
+        }
     }
     #[inline]
-    fn write(&mut self, input: &[u8]) {
+    fn write(&mut self, input: &[u8]) -> VndbResult<()> {
         let writer = self.stream.get_mut();
-        writer.write(&input).unwrap();
-        writer.flush().unwrap();
+        match writer.write(&input) {
+            Ok(_) => match writer.flush() {
+                Ok(_) => Ok(()),
+                Err(err) => Err(VndbError::IO {
+                    msg: err.to_string(),
+                }),
+            },
+            Err(err) => Err(VndbError::IO {
+                msg: err.to_string(),
+            }),
+        }
     }
     #[inline]
     #[must_use]
@@ -51,9 +61,8 @@ where
         input.push(SPACE_CHAR);
         input.extend(buf);
         input.push(END_OF_TRANSMISSION);
-        println!("Request: {}", String::from_utf8(input.clone()).unwrap());
-        self.write(&input);
-        Response::parse_response(&self.read())
+        self.write(&input)?;
+        Response::parse_response(&self.read()?)
     }
     #[inline]
     fn get<T>(
@@ -69,11 +78,16 @@ where
         let response = self.make_request(
             RequestType::Get,
             GetRequest::new(get_type, flags, filters, options)
-                .to_request()
+                .to_request()?
                 .as_bytes(),
         )?;
         match response {
-            Response::Results(vec) => Ok(serde_json::from_slice(&vec).unwrap()),
+            Response::Results(vec) => match serde_json::from_slice(&vec) {
+                Ok(de) => Ok(de),
+                Err(err) => Err(VndbError::Other {
+                    msg: err.to_string(),
+                }),
+            },
             Response::Error(err) => Err(err),
             _ => Err(VndbError::Other {
                 msg: "Unexpected response type".to_owned(),
@@ -85,7 +99,7 @@ where
         let response = self.make_request(
             RequestType::Set,
             SetRequest::new(set_type, id, fields)
-                .to_request()
+                .to_request()?
                 .as_bytes(),
         )?;
         match response {
@@ -105,8 +119,17 @@ where
     /// Login without credentials, using set commands will result in error
     pub fn login(&mut self) -> VndbResult<()> {
         let request = LoginRequest::default();
-        let response =
-            self.make_request(RequestType::Login, &serde_json::to_vec(&request).unwrap())?;
+        let response = self.make_request(
+            RequestType::Login,
+            &match serde_json::to_vec(&request) {
+                Ok(de) => de,
+                Err(err) => {
+                    return Err(VndbError::Other {
+                        msg: err.to_string(),
+                    })
+                }
+            },
+        )?;
         match response {
             Response::Ok => Ok(()),
             Response::Error(err) => Err(err),
@@ -118,8 +141,17 @@ where
     /// Login using credentials, allowing using set commands
     pub fn login_with_credentials(&mut self, username: &str, password: &str) -> VndbResult<()> {
         let request = LoginRequest::new(username, password);
-        let response =
-            self.make_request(RequestType::Login, &serde_json::to_vec(&request).unwrap())?;
+        let response = self.make_request(
+            RequestType::Login,
+            &match serde_json::to_vec(&request) {
+                Ok(de) => de,
+                Err(err) => {
+                    return Err(VndbError::Other {
+                        msg: err.to_string(),
+                    })
+                }
+            },
+        )?;
         match response {
             Response::Ok => Ok(()),
             Response::Error(err) => Err(err),

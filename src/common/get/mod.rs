@@ -7,6 +7,7 @@ pub mod ulistlabels;
 pub mod user;
 pub mod vn;
 
+use super::error::{VndbError, VndbResult};
 use character::GetCharacterResponse;
 use producer::GetProducerResponse;
 use release::GetReleaseResponse;
@@ -98,23 +99,30 @@ impl<'a> GetRequest<'a> {
             options,
         }
     }
-    pub(crate) fn to_request(&self) -> String {
+    pub(crate) fn to_request(&self) -> VndbResult<String> {
         let mut flags = String::new();
         for flag in self.flags {
             flags += flag.as_ref();
             flags += ",";
         }
         let options = match &self.options {
-            Some(o) => serde_json::to_string(&o).unwrap(),
+            Some(o) => match serde_json::to_string(&o) {
+                Ok(de) => de,
+                Err(err) => {
+                    return Err(VndbError::Other {
+                        msg: err.to_string(),
+                    })
+                }
+            },
             None => String::default(),
         };
-        format!(
+        Ok(format!(
             "{} {} {} {}",
             self.get_type.as_ref(),
             flags,
             self.filters,
             options
-        )
+        ))
     }
 }
 

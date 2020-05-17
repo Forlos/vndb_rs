@@ -15,7 +15,7 @@ fn parse_error() {
     let error = client.login();
 
     assert!(error.is_err());
-    let error = error.err().unwrap();
+    let error = error.err().expect("Should be error");
     assert_eq!(error, expected);
 }
 
@@ -33,7 +33,7 @@ fn missing_error() {
     let error = client.login();
 
     assert!(error.is_err());
-    let error = error.err().unwrap();
+    let error = error.err().expect("Should be error");
     assert_eq!(error, expected);
 }
 
@@ -51,7 +51,7 @@ fn bad_arg_error() {
     let error = client.login();
 
     assert!(error.is_err());
-    let error = error.err().unwrap();
+    let error = error.err().expect("Should be error");
     assert_eq!(error, expected);
 }
 
@@ -68,7 +68,7 @@ fn need_login_error() {
     let error = client.login();
 
     assert!(error.is_err());
-    let error = error.err().unwrap();
+    let error = error.err().expect("Should be error");
     assert_eq!(error, expected);
 }
 
@@ -88,7 +88,7 @@ fn throttled_error() {
     let error = client.login();
 
     assert!(error.is_err());
-    let error = error.err().unwrap();
+    let error = error.err().expect("Should be error");
     assert_eq!(error, expected);
 }
 
@@ -105,7 +105,7 @@ fn auth_error() {
     let error = client.login();
 
     assert!(error.is_err());
-    let error = error.err().unwrap();
+    let error = error.err().expect("Should be error");
     assert_eq!(error, expected);
 }
 
@@ -122,7 +122,7 @@ fn loggedin_error() {
     let error = client.login();
 
     assert!(error.is_err());
-    let error = error.err().unwrap();
+    let error = error.err().expect("Should be error");
     assert_eq!(error, expected);
 }
 
@@ -139,7 +139,7 @@ fn gettype_error() {
     let error = client.login();
 
     assert!(error.is_err());
-    let error = error.err().unwrap();
+    let error = error.err().expect("Should be error");
     assert_eq!(error, expected);
 }
 
@@ -157,7 +157,7 @@ fn getinfo_error() {
     let error = client.login();
 
     assert!(error.is_err());
-    let error = error.err().unwrap();
+    let error = error.err().expect("Should be error");
     assert_eq!(error, expected);
 }
 
@@ -177,7 +177,7 @@ fn filter_error() {
     let error = client.login();
 
     assert!(error.is_err());
-    let error = error.err().unwrap();
+    let error = error.err().expect("Should be error");
     assert_eq!(error, expected);
 }
 
@@ -194,7 +194,7 @@ fn settype_error() {
     let error = client.login();
 
     assert!(error.is_err());
-    let error = error.err().unwrap();
+    let error = error.err().expect("Should be error");
     assert_eq!(error, expected);
 }
 
@@ -211,6 +211,6 @@ fn other_error() {
     let error = client.login();
 
     assert!(error.is_err());
-    let error = error.err().unwrap();
+    let error = error.err().expect("Should be error");
     assert_eq!(error, expected);
 }

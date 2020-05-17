@@ -1,5 +1,6 @@
 pub mod ulist;
 
+use super::error::{VndbError, VndbResult};
 use strum_macros::AsRefStr;
 use ulist::UListFields;
 
@@ -29,11 +30,23 @@ impl SetRequest {
             fields,
         }
     }
-    pub(crate) fn to_request(&self) -> String {
+    pub(crate) fn to_request(&self) -> VndbResult<String> {
         let fields = match &self.fields {
-            Some(Fields::Ulist(ulist)) => serde_json::to_string(&ulist).unwrap(),
+            Some(Fields::Ulist(ulist)) => match serde_json::to_string(&ulist) {
+                Ok(de) => de,
+                Err(err) => {
+                    return Err(VndbError::Other {
+                        msg: err.to_string(),
+                    })
+                }
+            },
             None => String::default(),
         };
-        format!("{} {} {}", self.set_type.as_ref(), &self.id, fields)
+        Ok(format!(
+            "{} {} {}",
+            self.set_type.as_ref(),
+            &self.id,
+            fields
+        ))
     }
 }
