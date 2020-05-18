@@ -3,6 +3,13 @@ name = "vndb_rs"
 version = "0.1.0"
 authors = ["forlos <forlos@disroot.org>"]
 edition = "2018"
+license = "LICENSE.md"
+description = "Bare-bones VNDB api"
+homepage = "https://github.com/Forlos/vndb_rs"
+repository = "https://github.com/Forlos/vndb_rs"
+readme = "README.org"
+keywords = ["vndb", "api"]
+categories = ["api-bindings"]
 
 [dependencies]
 serde = { version = "1.0.106", default_features = false, features = ["derive"] }

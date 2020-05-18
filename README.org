@@ -7,7 +7,7 @@ It is recommended to write higher level wrapper around this library rather than 
 Requires Rust 1.42
 #+BEGIN_SRC toml
 [dependencies]
-vndb_rs = { git = "https://github.com/Forlos/vndb_rs", branch = "master" }
+vndb_rs = "0.1"
 #+END_SRC
 ** Features
 - [X] All api actions
