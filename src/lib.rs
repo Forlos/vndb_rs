@@ -1,3 +1,22 @@
+//! # vndb_rs
+//!
+//! Bare-bones VNDB api
+//!
+//! # Example
+//! ```rust
+//!use std::net::TcpStream;
+//!use vndb_rs::{
+//!   API_URL,
+//!   sync::client::Client,
+//!};
+//!
+//!let mut client = Client::new(TcpStream::connect(API_URL).unwrap());
+//!let response = client.login();
+//!println!("{:#?}", response);
+//!let response = client.get_dbstats();
+//!println!("{:#?}", response);
+//! ```
+
 #![warn(rust_2018_idioms, missing_debug_implementations)]
 
 pub mod common;

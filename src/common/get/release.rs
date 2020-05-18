@@ -47,6 +47,7 @@ pub struct GetReleaseResponse {
     pub producers: Option<Vec<Producers>>,
 }
 
+/// Release type
 #[derive(Deserialize, Debug, PartialEq)]
 #[serde(rename_all = "lowercase")]
 pub enum ReleaseType {
@@ -55,6 +56,7 @@ pub enum ReleaseType {
     Trial,
 }
 
+/// Release media
 #[derive(Deserialize, Debug, PartialEq)]
 pub struct Media {
     pub medium: String,
@@ -62,6 +64,7 @@ pub struct Media {
     pub quantity: Option<usize>,
 }
 
+/// VN voice acting type
 #[repr(u8)]
 #[derive(Deserialize_repr, Debug, PartialEq)]
 pub enum Voiced {
@@ -71,6 +74,7 @@ pub enum Voiced {
     FullVoiced = 4,
 }
 
+/// Types of animations
 #[repr(u8)]
 #[derive(Deserialize_repr, Debug, PartialEq)]
 pub enum Animation {
@@ -80,6 +84,7 @@ pub enum Animation {
     FullyAnimated = 4,
 }
 
+/// Visual novel linked to this release.
 #[derive(Deserialize, Debug, PartialEq)]
 pub struct Vn {
     pub id: usize,
@@ -88,6 +93,7 @@ pub struct Vn {
     pub original_title: Option<String>,
 }
 
+/// Producer involved in this release.
 #[derive(Deserialize, Debug, PartialEq)]
 pub struct Producers {
     pub id: usize,

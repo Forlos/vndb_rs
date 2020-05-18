@@ -47,6 +47,7 @@ pub struct GetVnResponse {
     pub id: usize,
 }
 
+/// Represents VN length
 #[repr(u8)]
 #[derive(Deserialize_repr, Debug, PartialEq)]
 pub enum VnLength {
@@ -57,6 +58,7 @@ pub enum VnLength {
     VeryLong = 5,
 }
 
+/// External site links
 #[derive(Deserialize, Debug, PartialEq)]
 pub struct Links {
     pub wikipedia: Option<String>,
@@ -65,6 +67,7 @@ pub struct Links {
     pub wikidata: Option<String>,
 }
 
+/// Anime related to the VN,
 #[derive(Deserialize, Debug, PartialEq)]
 pub struct Anime {
     pub id: usize,
@@ -77,6 +80,7 @@ pub struct Anime {
     pub typ: Option<String>,
 }
 
+/// Related visual novel
 #[derive(Deserialize, Debug, PartialEq)]
 pub struct Relations {
     pub id: usize,
@@ -87,6 +91,7 @@ pub struct Relations {
     pub official: bool,
 }
 
+/// Tag linked to this VN.
 #[derive(Debug, PartialEq)]
 pub struct Tag {
     pub id: usize,
@@ -94,6 +99,7 @@ pub struct Tag {
     pub spoiler_level: SpoilerLevel,
 }
 
+/// VN screenshots
 #[derive(Deserialize, Debug, PartialEq)]
 pub struct Screens {
     #[serde(rename = "image")]
@@ -105,6 +111,7 @@ pub struct Screens {
     pub width: usize,
 }
 
+/// Staff related to the VN
 #[derive(Deserialize, Debug, PartialEq)]
 pub struct Staff {
     #[serde(rename = "sid")]

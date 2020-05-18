@@ -2,9 +2,8 @@ use super::{dbstats::DbStatsResponse, error::VndbResult};
 use crate::{common::error::VndbError, END_OF_TRANSMISSION, SPACE_CHAR};
 
 #[derive(Debug)]
-pub enum Response {
+pub(crate) enum Response {
     Ok,
-    Error(VndbError),
     DbStats(DbStatsResponse),
     Results(Vec<u8>),
 }

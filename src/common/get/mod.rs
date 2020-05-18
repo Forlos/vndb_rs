@@ -22,7 +22,7 @@ use vn::GetVnResponse;
 
 #[derive(Deserialize, Debug)]
 #[serde(untagged)]
-pub enum GetResponse {
+pub(crate) enum GetResponse {
     Vn(Box<GetVnResponse>),
     Release(Box<GetReleaseResponse>),
     Producer(Box<GetProducerResponse>),
@@ -42,7 +42,7 @@ pub struct Results {
 
 #[derive(AsRefStr, Debug)]
 #[strum(serialize_all = "lowercase")]
-pub enum GetType {
+pub(crate) enum GetType {
     Vn,
     Release,
     Producer,
@@ -126,16 +126,36 @@ impl<'a> GetRequest<'a> {
     }
 }
 
+/// The options argument is optional, and influences the behaviour of the returned results.
 #[derive(Serialize, Debug)]
 pub struct Options {
-    page: usize,
-    results: usize,
-    sort: String,
-    reverse: bool,
+    /// Page 1 (the default) returns the first 10 results (1-10), page 2 returns the following 10 (11-20), etc.
+    #[serde(skip_serializing_if = "Option::is_none")]
+    page: Option<usize>,
+    /// Maximum number of results to return.
+    /// Also affects the "page" option above.
+    /// For example: with "page" set to 2 and "results" set to 5, the second five results (that is, results 6-10) will be returned.
+    /// Default: 10.
+    #[serde(skip_serializing_if = "Option::is_none")]
+    results: Option<usize>,
+    /// The field to order the results by.
+    /// The accepted field names differ per type.
+    /// The default sort field is the ID of the database entry.
+    #[serde(skip_serializing_if = "Option::is_none")]
+    sort: Option<String>,
+    /// Set to true to reverse the order of the results.
+    /// Default false.
+    #[serde(skip_serializing_if = "Option::is_none")]
+    reverse: Option<bool>,
 }
 
 impl Options {
-    pub fn new(page: usize, results: usize, sort: String, reverse: bool) -> Self {
+    pub fn new(
+        page: Option<usize>,
+        results: Option<usize>,
+        sort: Option<String>,
+        reverse: Option<bool>,
+    ) -> Self {
         Self {
             page,
             results,

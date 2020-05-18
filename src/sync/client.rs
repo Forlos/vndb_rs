@@ -1,7 +1,8 @@
+//! Sync client implementation
+
 use serde::de::DeserializeOwned;
 use std::io::{BufRead, BufReader, Read, Write};
 
-use crate::common::response::Response;
 use crate::common::{
     dbstats::DbStatsResponse,
     error::{VndbError, VndbResult},
@@ -12,10 +13,12 @@ use crate::common::{
     },
     login::LoginRequest,
     request::RequestType,
+    response::Response,
     set::{ulist::UListFields, Fields, SetRequest, SetType},
 };
 use crate::{END_OF_TRANSMISSION, SPACE_CHAR};
 
+/// Sync client used to call VNDB api
 #[derive(Debug)]
 pub struct Client<IO>
 where
@@ -87,7 +90,6 @@ where
                     msg: err.to_string(),
                 }),
             },
-            Response::Error(err) => Err(err),
             _ => Err(VndbError::Other {
                 msg: "Unexpected response type".to_owned(),
             }),
@@ -103,7 +105,6 @@ where
         )?;
         match response {
             Response::Ok => Ok(()),
-            Response::Error(err) => Err(err),
             _ => Err(VndbError::Other {
                 msg: "Unexpected response type".to_owned(),
             }),
@@ -131,7 +132,6 @@ where
         )?;
         match response {
             Response::Ok => Ok(()),
-            Response::Error(err) => Err(err),
             _ => Err(VndbError::Other {
                 msg: "Unexpected response type".to_owned(),
             }),
@@ -153,7 +153,6 @@ where
         )?;
         match response {
             Response::Ok => Ok(()),
-            Response::Error(err) => Err(err),
             _ => Err(VndbError::Other {
                 msg: "Unexpected response type".to_owned(),
             }),
@@ -164,7 +163,6 @@ where
         let response = self.make_request(RequestType::DbStats, &Vec::new())?;
         match response {
             Response::DbStats(db_stats) => Ok(db_stats),
-            Response::Error(err) => Err(err),
             _ => Err(VndbError::Other {
                 msg: "Unexpected response type".to_owned(),
             }),

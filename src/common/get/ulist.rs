@@ -35,6 +35,7 @@ pub struct GetUListResponse {
     pub labels: Option<Vec<Label>>,
 }
 
+/// Label assigned to this VN entry
 #[derive(Deserialize, Debug, PartialEq)]
 pub struct Label {
     pub id: usize,

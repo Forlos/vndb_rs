@@ -2,7 +2,7 @@ use strum_macros::AsRefStr;
 
 #[derive(AsRefStr, Debug)]
 #[strum(serialize_all = "lowercase")]
-pub enum RequestType {
+pub(crate) enum RequestType {
     Login,
     DbStats,
     Get,
