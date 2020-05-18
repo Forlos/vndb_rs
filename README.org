@@ -1,5 +1,5 @@
 * Vndb_rs
-Bare-bones [[https:vndb.org][VNDB]] [[https:vndb.org/d11][api]]
+Bare-bones VNDB api
 
 It is recommended to write higher level wrapper around this library rather than using it directly.
 ** Usage
