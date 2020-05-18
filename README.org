@@ -1,5 +1,4 @@
 * Vndb_rs
-[[https://github.com/Forlos/vndb_rs/workflows/CI][https://github.com/Forlos/vndb_rs/workflows/CI/badge.svg?branch=master]]
 Bare-bones [[https:vndb.org][VNDB]] [[https:vndb.org/d11][api]]
 
 It is recommended to write higher level wrapper around this library rather than using it directly.
