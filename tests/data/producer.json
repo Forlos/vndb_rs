@@ -1,0 +1,80 @@
+{
+  "more": false,
+  "items": [
+    {
+      "links": {
+        "homepage": "http://www.cd-bros.co.jp/yamitsu/",
+        "wikidata": null,
+        "wikipedia": null
+      },
+      "description": "Archive Site: https://web.archive.org/web/20071011044708/http://www.cd-bros.co.jp/yamitsu/",
+      "aliases": "Yamitsu",
+      "original": "闇雲通信",
+      "id": 1,
+      "relations": [
+        {
+          "name": "CD Bros.",
+          "relation": "par",
+          "original": null,
+          "id": 266
+        }
+      ],
+      "name": "Yamikumo-Communications",
+      "language": "ja",
+      "type": "co"
+    },
+    {
+      "original": "せ・き・ら・ら",
+      "aliases": "Se-ki-ra-ra",
+      "description": null,
+      "links": {
+        "wikipedia": null,
+        "homepage": "https://web.archive.org/web/20071025022502/http://www.cd-bros.co.jp/sekilala/",
+        "wikidata": null
+      },
+      "type": "co",
+      "name": "Sekilala",
+      "language": "ja",
+      "relations": [
+        {
+          "id": 266,
+          "original": null,
+          "name": "CD Bros.",
+          "relation": "par"
+        }
+      ],
+      "id": 2
+    },
+    {
+      "type": "ng",
+      "name": "Team Doramusuco",
+      "language": "ja",
+      "relations": [],
+      "id": 1377,
+      "original": "ちーむどらむすこ",
+      "aliases": "Chiimu Doramusuko",
+      "description": null,
+      "links": {
+        "wikipedia": null,
+        "wikidata": null,
+        "homepage": "http://www.doramusuco.com/"
+      }
+    },
+    {
+      "id": 6540,
+      "relations": [],
+      "language": "en",
+      "name": "MangaKeri",
+      "type": "in",
+      "links": {
+        "homepage": "https://twitter.com/MangaKeri",
+        "wikidata": null,
+        "wikipedia": null
+      },
+      "description": null,
+      "aliases": null,
+      "original": null
+    }
+  ],
+  "num": 4
+}

@@ -1,0 +1,22 @@
+{
+  "more": false,
+  "num": 4,
+  "items": [
+    {
+      "username": "multi",
+      "id": 1
+    },
+    {
+      "id": 2,
+      "username": "yorhel"
+    },
+    {
+      "id": 3,
+      "username": "ayo"
+    },
+    {
+      "username": "hillie",
+      "id": 4
+    }
+  ]
+}

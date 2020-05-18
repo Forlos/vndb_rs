@@ -1,0 +1,893 @@
+{
+  "items": [
+    {
+      "gender": "m",
+      "original": "虚淵 玄",
+      "links": {
+        "pixiv": null,
+        "homepage": null,
+        "wikidata": "Q50038",
+        "wikipedia": "Gen_Urobuchi",
+        "twitter": "Butch_Gen",
+        "anidb": 2442
+      },
+      "voiced": [],
+      "description": "Urobuchi Gen was born December 20, 1972 in Japan. He is a scenario writer currently belonging to game studio [url=/p42]Nitro+[/url]. Urobuchi made his debut with the scenario for [url=/v45]Phantom of Inferno[/url], which was later adapted into an OVA and a TV series.",
+      "language": "ja",
+      "name": "Urobuchi Gen",
+      "id": 1,
+      "main_alias": 1,
+      "vns": [
+        {
+          "aid": 1,
+          "id": 1390,
+          "role": "scenario",
+          "note": null
+        },
+        {
+          "note": "2nd OP lyrics",
+          "role": "staff",
+          "id": 234,
+          "aid": 1
+        },
+        {
+          "role": "staff",
+          "note": "Supervision",
+          "id": 400,
+          "aid": 1
+        },
+        {
+          "aid": 1,
+          "role": "director",
+          "note": null,
+          "id": 434
+        },
+        {
+          "aid": 1,
+          "role": "staff",
+          "note": "Supervision",
+          "id": 434
+        },
+        {
+          "aid": 1,
+          "note": "Original concept, planning, debug",
+          "role": "staff",
+          "id": 431
+        },
+        {
+          "aid": 1,
+          "note": "\"Tobitate!\" (Vita)",
+          "role": "scenario",
+          "id": 11
+        },
+        {
+          "id": 11,
+          "role": "staff",
+          "note": "Special thanks",
+          "aid": 1
+        },
+        {
+          "aid": 1,
+          "role": "staff",
+          "note": "Game composition assistance",
+          "id": 432
+        },
+        {
+          "aid": 1,
+          "note": "Adviser",
+          "role": "staff",
+          "id": 1399
+        },
+        {
+          "aid": 1,
+          "id": 97,
+          "note": null,
+          "role": "director"
+        },
+        {
+          "id": 97,
+          "role": "scenario",
+          "note": null,
+          "aid": 1
+        },
+        {
+          "role": "staff",
+          "note": "Supervision, Scripting",
+          "id": 97,
+          "aid": 1
+        },
+        {
+          "note": null,
+          "role": "scenario",
+          "id": 433,
+          "aid": 1
+        },
+        {
+          "aid": 1,
+          "id": 433,
+          "role": "director",
+          "note": null
+        },
+        {
+          "aid": 1,
+          "id": 433,
+          "note": "Planning",
+          "role": "staff"
+        },
+        {
+          "aid": 1,
+          "id": 231,
+          "role": "director",
+          "note": "Original version only"
+        },
+        {
+          "note": "Supervision",
+          "role": "staff",
+          "id": 231,
+          "aid": 1
+        },
+        {
+          "aid": 1,
+          "role": "scenario",
+          "note": null,
+          "id": 183
+        },
+        {
+          "aid": 1,
+          "id": 183,
+          "role": "director",
+          "note": null
+        },
+        {
+          "aid": 1,
+          "id": 183,
+          "role": "staff",
+          "note": "Planning"
+        },
+        {
+          "id": 428,
+          "role": "scenario",
+          "note": null,
+          "aid": 1
+        },
+        {
+          "aid": 1,
+          "role": "staff",
+          "note": "Planning",
+          "id": 428
+        },
+        {
+          "aid": 1,
+          "note": "Integration",
+          "role": "director",
+          "id": 45
+        },
+        {
+          "id": 45,
+          "role": "scenario",
+          "note": null,
+          "aid": 1
+        },
+        {
+          "id": 45,
+          "role": "staff",
+          "note": "Scenario supervision (PS2), supervision, voice supervision (remake)",
+          "aid": 1
+        },
+        {
+          "aid": 1,
+          "role": "staff",
+          "note": "Original concept, scenario supervision",
+          "id": 17099
+        }
+      ],
+      "aliases": [
+        [
+          1,
+          "Urobuchi Gen",
+          "虚淵 玄"
+        ]
+      ]
+    },
+    {
+      "aliases": [
+        [
+          2,
+          "Nasu Kinoko",
+          "奈須 きのこ"
+        ]
+      ],
+      "vns": [
+        {
+          "aid": 2,
+          "id": 7,
+          "note": null,
+          "role": "director"
+        },
+        {
+          "id": 7,
+          "role": "scenario",
+          "note": null,
+          "aid": 2
+        },
+        {
+          "aid": 2,
+          "id": 7,
+          "role": "staff",
+          "note": "Planning, original concept, programming"
+        },
+        {
+          "note": null,
+          "role": "scenario",
+          "id": 19119,
+          "aid": 2
+        },
+        {
+          "aid": 2,
+          "role": "staff",
+          "note": "Supervision",
+          "id": 21739
+        },
+        {
+          "aid": 2,
+          "id": 7602,
+          "role": "scenario",
+          "note": null
+        },
+        {
+          "note": "Bonus chapter: Canaan",
+          "role": "scenario",
+          "id": 1299,
+          "aid": 2
+        },
+        {
+          "id": 11,
+          "role": "director",
+          "note": null,
+          "aid": 2
+        },
+        {
+          "id": 11,
+          "role": "scenario",
+          "note": null,
+          "aid": 2
+        },
+        {
+          "aid": 2,
+          "role": "staff",
+          "note": "Planning, original concept, composition, scripting assistance",
+          "id": 11
+        },
+        {
+          "aid": 2,
+          "id": 50,
+          "note": "Main Director",
+          "role": "director"
+        },
+        {
+          "aid": 2,
+          "id": 50,
+          "note": "Main story segments",
+          "role": "scenario"
+        },
+        {
+          "id": 50,
+          "role": "staff",
+          "note": "Planning, original concept, game composition",
+          "aid": 2
+        },
+        {
+          "role": "scenario",
+          "note": null,
+          "id": 165,
+          "aid": 2
+        },
+        {
+          "aid": 2,
+          "note": null,
+          "role": "scenario",
+          "id": 12369
+        },
+        {
+          "aid": 2,
+          "id": 47,
+          "note": null,
+          "role": "director"
+        },
+        {
+          "id": 47,
+          "role": "scenario",
+          "note": null,
+          "aid": 2
+        },
+        {
+          "aid": 2,
+          "role": "staff",
+          "note": "Planning, original concept, game composition, programming",
+          "id": 47
+        },
+        {
+          "aid": 2,
+          "id": 17909,
+          "note": null,
+          "role": "scenario"
+        },
+        {
+          "role": "director",
+          "note": null,
+          "id": 777,
+          "aid": 2
+        },
+        {
+          "note": null,
+          "role": "scenario",
+          "id": 777,
+          "aid": 2
+        },
+        {
+          "aid": 2,
+          "id": 777,
+          "role": "staff",
+          "note": "Planning"
+        },
+        {
+          "aid": 2,
+          "id": 49,
+          "note": null,
+          "role": "scenario"
+        }
+      ],
+      "id": 2,
+      "main_alias": 2,
+      "name": "Nasu Kinoko",
+      "language": "ja",
+      "links": {
+        "wikidata": "Q1072659",
+        "homepage": null,
+        "pixiv": null,
+        "twitter": null,
+        "anidb": 2174,
+        "wikipedia": "Kinoko_Nasu"
+      },
+      "description": "A Japanese author, best known for writing the visual novels [url=/v7]Tsukihime[/url] and [url=/v11]Fate/stay night[/url]. Renowned for a unique style of storytelling and prose, Nasu is amongst the most prominent visual novelists in Japan.\n\nTogether with high school classmate and friend, Takeuchi Takashi, Nasu formed [url=/p6]Type-Moon[/url] in 2000, originally as a doujin group to create the visual novel [url=/v7]Tsukihime[/url], which soon gained immense popularity, much of which is attributed to Nasu's unique style of storytelling.\n\n[From [url=http://anidb.net/cr2174]AniDB[/url]]",
+      "voiced": [],
+      "original": "奈須 きのこ",
+      "gender": "m"
+    },
+    {
+      "voiced": [],
+      "description": "Tanaka Romeo, born June 6, 1973, is a Japanese novelist and scenario writer for bishoujo games.",
+      "links": {
+        "wikipedia": "Romeo_Tanaka",
+        "twitter": null,
+        "anidb": 23714,
+        "pixiv": null,
+        "homepage": null,
+        "wikidata": "Q1067552"
+      },
+      "original": "田中 ロミオ",
+      "gender": "m",
+      "aliases": [
+        [
+          3,
+          "Tanaka Romeo",
+          "田中 ロミオ"
+        ],
+        [
+          375,
+          "Yamada Hajime",
+          "山田 一"
+        ]
+      ],
+      "main_alias": 3,
+      "id": 3,
+      "vns": [
+        {
+          "role": "scenario",
+          "note": "Kotori route",
+          "id": 7537,
+          "aid": 3
+        },
+        {
+          "aid": 3,
+          "role": "scenario",
+          "note": null,
+          "id": 14303
+        },
+        {
+          "id": 5514,
+          "role": "staff",
+          "note": "Scenario supervision",
+          "aid": 3
+        },
+        {
+          "aid": 3,
+          "role": "staff",
+          "note": "Original concept, planning",
+          "id": 44
+        },
+        {
+          "aid": 3,
+          "id": 660,
+          "role": "staff",
+          "note": "Original concept, planning"
+        },
+        {
+          "note": "PS2 and DC additional scenarios",
+          "role": "scenario",
+          "id": 5838,
+          "aid": 3
+        },
+        {
+          "id": 1352,
+          "role": "scenario",
+          "note": null,
+          "aid": 3
+        },
+        {
+          "aid": 3,
+          "id": 972,
+          "role": "scenario",
+          "note": "Masumi route"
+        },
+        {
+          "aid": 3,
+          "role": "scenario",
+          "note": "In-game short story \"Owaranai Kaidan\"",
+          "id": 4091
+        },
+        {
+          "note": "Original concept, planning",
+          "role": "staff",
+          "id": 96,
+          "aid": 3
+        },
+        {
+          "aid": 3,
+          "id": 24870,
+          "role": "scenario",
+          "note": null
+        },
+        {
+          "aid": 3,
+          "id": 292,
+          "role": "staff",
+          "note": "Special thanks"
+        },
+        {
+          "id": 8020,
+          "note": "Kotori, Akane and Kagari routes",
+          "role": "scenario",
+          "aid": 3
+        },
+        {
+          "aid": 3,
+          "role": "staff",
+          "note": "Setting",
+          "id": 8020
+        },
+        {
+          "aid": 3,
+          "id": 1319,
+          "role": "scenario",
+          "note": "Twins' route"
+        },
+        {
+          "aid": 3,
+          "id": 21644,
+          "note": null,
+          "role": "scenario"
+        },
+        {
+          "role": "staff",
+          "note": "Setting",
+          "id": 21644,
+          "aid": 3
+        },
+        {
+          "aid": 3,
+          "role": "scenario",
+          "note": "\"Country Girl\"",
+          "id": 17136
+        },
+        {
+          "role": "scenario",
+          "note": null,
+          "id": 1278,
+          "aid": 3
+        },
+        {
+          "note": null,
+          "role": "scenario",
+          "id": 1219,
+          "aid": 3
+        },
+        {
+          "aid": 3,
+          "id": 5738,
+          "note": "Original concept, planning",
+          "role": "staff"
+        },
+        {
+          "id": 66,
+          "role": "scenario",
+          "note": null,
+          "aid": 3
+        },
+        {
+          "id": 66,
+          "role": "staff",
+          "note": "Planning, original picture specification, ED lyrics",
+          "aid": 3
+        },
+        {
+          "aid": 3,
+          "note": "Terra ED lyrics",
+          "role": "music",
+          "id": 751
+        },
+        {
+          "id": 751,
+          "note": "Part of the common route, most of Moon route, Kotori, Akane, Terra routes",
+          "role": "scenario",
+          "aid": 3
+        },
+        {
+          "aid": 3,
+          "id": 751,
+          "role": "staff",
+          "note": "Setting"
+        },
+        {
+          "role": "scenario",
+          "note": null,
+          "id": 3184,
+          "aid": 375
+        },
+        {
+          "id": 2,
+          "note": null,
+          "role": "scenario",
+          "aid": 375
+        },
+        {
+          "aid": 375,
+          "id": 2248,
+          "role": "staff",
+          "note": "Original concept, planning"
+        },
+        {
+          "aid": 375,
+          "note": "Scenario supervision",
+          "role": "staff",
+          "id": 2247
+        },
+        {
+          "id": 5467,
+          "role": "staff",
+          "note": "Scenario supervision",
+          "aid": 375
+        },
+        {
+          "aid": 375,
+          "id": 4286,
+          "note": "Scenario draft",
+          "role": "staff"
+        },
+        {
+          "id": 1094,
+          "role": "scenario",
+          "note": null,
+          "aid": 375
+        },
+        {
+          "role": "scenario",
+          "note": null,
+          "id": 155,
+          "aid": 375
+        }
+      ],
+      "language": "ja",
+      "name": "Tanaka Romeo"
+    },
+    {
+      "aliases": [
+        [
+          4,
+          "Sakurai Hikaru",
+          "桜井 光"
+        ]
+      ],
+      "id": 4,
+      "main_alias": 4,
+      "vns": [
+        {
+          "id": 9318,
+          "role": "scenario",
+          "note": null,
+          "aid": 4
+        },
+        {
+          "role": "scenario",
+          "note": "Misc. writing",
+          "id": 46,
+          "aid": 4
+        },
+        {
+          "aid": 4,
+          "id": 596,
+          "role": "scenario",
+          "note": null
+        },
+        {
+          "aid": 4,
+          "id": 19119,
+          "note": "Assistant writer",
+          "role": "scenario"
+        },
+        {
+          "aid": 4,
+          "id": 1882,
+          "role": "scenario",
+          "note": null
+        },
+        {
+          "role": "scenario",
+          "note": null,
+          "id": 21664,
+          "aid": 4
+        },
+        {
+          "role": "staff",
+          "note": "Original creator, draft, planning, and supervision",
+          "id": 21664,
+          "aid": 4
+        },
+        {
+          "note": null,
+          "role": "director",
+          "id": 10797,
+          "aid": 4
+        },
+        {
+          "role": "scenario",
+          "note": null,
+          "id": 10797,
+          "aid": 4
+        },
+        {
+          "aid": 4,
+          "id": 10797,
+          "role": "staff",
+          "note": "Planning, Original Concept"
+        },
+        {
+          "id": 4777,
+          "note": "Assistant writer",
+          "role": "scenario",
+          "aid": 4
+        },
+        {
+          "id": 8508,
+          "role": "scenario",
+          "note": "Assistant writer",
+          "aid": 4
+        },
+        {
+          "aid": 4,
+          "role": "scenario",
+          "note": null,
+          "id": 20272
+        },
+        {
+          "note": null,
+          "role": "director",
+          "id": 1027,
+          "aid": 4
+        },
+        {
+          "aid": 4,
+          "id": 1027,
+          "role": "scenario",
+          "note": null
+        },
+        {
+          "id": 1027,
+          "role": "staff",
+          "note": "Planning, Original Concept",
+          "aid": 4
+        },
+        {
+          "id": 17975,
+          "role": "director",
+          "note": null,
+          "aid": 4
+        },
+        {
+          "id": 17975,
+          "note": null,
+          "role": "scenario",
+          "aid": 4
+        },
+        {
+          "aid": 4,
+          "id": 1177,
+          "note": null,
+          "role": "scenario"
+        },
+        {
+          "id": 12595,
+          "role": "director",
+          "note": null,
+          "aid": 4
+        },
+        {
+          "aid": 4,
+          "id": 12595,
+          "role": "scenario",
+          "note": null
+        },
+        {
+          "aid": 4,
+          "id": 12595,
+          "note": "Planning",
+          "role": "staff"
+        },
+        {
+          "id": 417,
+          "note": null,
+          "role": "director",
+          "aid": 4
+        },
+        {
+          "role": "scenario",
+          "note": null,
+          "id": 417,
+          "aid": 4
+        },
+        {
+          "id": 417,
+          "role": "staff",
+          "note": "Planning, Original Concept",
+          "aid": 4
+        },
+        {
+          "id": 11,
+          "note": "\"Tobitate!\" (Vita)",
+          "role": "scenario",
+          "aid": 4
+        },
+        {
+          "aid": 4,
+          "role": "scenario",
+          "note": "PSVita version",
+          "id": 50
+        },
+        {
+          "aid": 4,
+          "id": 6310,
+          "note": null,
+          "role": "scenario"
+        },
+        {
+          "id": 8332,
+          "role": "scenario",
+          "note": null,
+          "aid": 4
+        },
+        {
+          "id": 598,
+          "note": null,
+          "role": "scenario",
+          "aid": 4
+        },
+        {
+          "aid": 4,
+          "id": 598,
+          "role": "staff",
+          "note": "Lyrics"
+        },
+        {
+          "aid": 4,
+          "id": 587,
+          "role": "scenario",
+          "note": "Assistant Writer"
+        },
+        {
+          "id": 600,
+          "role": "scenario",
+          "note": null,
+          "aid": 4
+        },
+        {
+          "aid": 4,
+          "role": "director",
+          "note": null,
+          "id": 528
+        },
+        {
+          "role": "scenario",
+          "note": null,
+          "id": 528,
+          "aid": 4
+        },
+        {
+          "aid": 4,
+          "note": "Original concept, planning",
+          "role": "staff",
+          "id": 528
+        },
+        {
+          "role": "director",
+          "note": null,
+          "id": 4936,
+          "aid": 4
+        },
+        {
+          "aid": 4,
+          "id": 4936,
+          "role": "scenario",
+          "note": null
+        },
+        {
+          "id": 4936,
+          "role": "staff",
+          "note": "Planning, original concept",
+          "aid": 4
+        },
+        {
+          "id": 2390,
+          "note": null,
+          "role": "scenario",
+          "aid": 4
+        },
+        {
+          "aid": 4,
+          "id": 2390,
+          "role": "staff",
+          "note": "Planning, original concept"
+        },
+        {
+          "id": 11033,
+          "role": "director",
+          "note": null,
+          "aid": 4
+        },
+        {
+          "aid": 4,
+          "id": 11033,
+          "note": null,
+          "role": "scenario"
+        },
+        {
+          "aid": 4,
+          "role": "staff",
+          "note": "Planning",
+          "id": 11033
+        },
+        {
+          "role": "scenario",
+          "note": "Kagari/Masaoka Episodes",
+          "id": 17099,
+          "aid": 4
+        }
+      ],
+      "language": "ja",
+      "name": "Sakurai Hikaru",
+      "description": "Sakurai Hikaru is a Japanese novelist and game scenarist who was affiliated with [url=/p29]Liar-soft[/url] but now is freelance.",
+      "voiced": [],
+      "links": {
+        "anidb": 43745,
+        "twitter": "h_sakura",
+        "wikipedia": null,
+        "homepage": "http://sakuraihikaru.com/",
+        "wikidata": "Q11537777",
+        "pixiv": null
+      },
+      "original": "桜井 光",
+      "gender": null
+    }
+  ],
+  "num": 4,
+  "more": false
+}

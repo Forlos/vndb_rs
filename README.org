@@ -1,1 +1,67 @@
-WIP
+* Vndb_rs
+Bare-bones VNDB api
+
+It is recommended to write higher level wrapper around this library rather than using it directly.
+** Usage
+Requires Rust 1.42
+#+BEGIN_SRC toml
+[dependencies]
+vndb_rs = "0.1"
+#+END_SRC
+** Features
+- [X] All api actions
+- [ ] TLS support
+- [ ] Async
+** Examples
+For now creating TCP stream is on user side. This is subject to change.
+
+*** Login and get db stats
+#+BEGIN_SRC rust
+use std::net::TcpStream;
+use vndb_rs::{
+    API_URL,
+    sync::client::Client,
+};
+
+let mut client = Client::new(TcpStream::connect(API_URL).unwrap());
+let response = client.login();
+println!("{:#?}", response);
+let response = client.get_dbstats();
+println!("{:#?}", response);
+#+END_SRC
+*** Login and get all info about vn with id 1
+#+BEGIN_SRC rust
+use std::net::TcpStream;
+use vndb_rs::{
+    API_URL,
+    sync::client::Client,
+    get::vn::VN_FLAGS,
+};
+
+let mut client = Client::new(TcpStream::connect(API_URL).unwrap());
+let response = client.login();
+println!("{:#?}", response);
+let response = client.get_vn(&VN_FLAGS, "(id=6540)".to_owned(), None);
+println!("{:#?}", response);
+#+END_SRC
+*** Login using credentials and set vote to 8.5 for VN with id 17
+#+BEGIN_SRC rust
+use std::net::TcpStream;
+use vndb_rs::{
+    API_URL,
+    sync::client::Client,
+    common::set::ulist::UListFields,
+};
+
+let mut client = Client::new(TcpStream::connect(API_URL).unwrap());
+let response = client.login_with_credentials("username", "password");
+println!("{:#?}", response);
+let response = client.set_ulist(
+    "17".to_owned(),
+    UListFields::new(None, None, None, Some(85), None),
+);
+println!("{:#?}", response);
+#+END_SRC
+
+** References
+- https://vndb.org/d11
