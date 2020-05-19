@@ -41,7 +41,7 @@ use vndb_rs::{
 let mut client = Client::new(TcpStream::connect(API_URL).unwrap());
 let response = client.login();
 println!("{:#?}", response);
-let response = client.get_vn(&VN_FLAGS, "(id=6540)".to_owned(), None);
+let response = client.get_vn(&VN_FLAGS, "(id=1)".to_owned(), None);
 println!("{:#?}", response);
 #+END_SRC
 *** Login using credentials and set vote to 8.5 for VN with id 17
