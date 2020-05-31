@@ -20,10 +20,7 @@ use crate::{END_OF_TRANSMISSION, SPACE_CHAR};
 
 /// Sync client used to call VNDB api
 #[derive(Debug)]
-pub struct Client<IO>
-where
-    IO: Read + Write,
-{
+pub struct Client<IO> {
     stream: BufReader<IO>,
 }
 
@@ -35,7 +32,10 @@ where
     fn read(&mut self) -> VndbResult<Vec<u8>> {
         let mut buf = Vec::with_capacity(0x100);
         match self.stream.read_until(END_OF_TRANSMISSION, &mut buf) {
-            Ok(_) => Ok(buf),
+            Ok(_) => {
+                log::debug!("Incoming: {:?}", String::from_utf8(buf.clone()));
+                Ok(buf)
+            }
             Err(err) => Err(VndbError::IO {
                 msg: err.to_string(),
             }),
@@ -111,7 +111,10 @@ where
         }
     }
 
-    pub fn new(stream: IO) -> Self {
+    pub fn new(stream: IO) -> Self
+    where
+        IO: Read + Write,
+    {
         Self {
             stream: BufReader::new(stream),
         }
